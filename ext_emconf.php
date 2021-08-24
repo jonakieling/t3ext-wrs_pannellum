@@ -7,13 +7,14 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Thomas Scholze',
     'author_email' => 'info@waurisch.de',
     'state' => 'stable',
-    'version' => '1.0.0',
-    'constraints' => [
-        'depends' => [
-          'typo3' => '8.7.13-9.5.99',
-        ],
-        'conflicts' => [],
-        'suggests' => [],
+    'version' => '1.1.0',
+    'constraints' =>
+    [
+    'depends' => [
+      'typo3' => '8.7.13-10.4.99',
+    ],
+    'conflicts' => [],
+    'suggests' => [],
     ],
     'clearCacheOnLoad' => true,
     'uploadfolder' => false
