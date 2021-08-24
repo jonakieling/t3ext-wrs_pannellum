@@ -7,7 +7,7 @@
     "typo3/cms-core": "^8.7 || ^9.5 || ^10.4"
   },
   "replace": {
-    "Waurisch/wrs-pannellum": "self.version",
+    "waurisch/wrs-pannellum": "self.version",
     "typo3-ter/wrs-pannellum": "self.version"
   },
   "extra": {
