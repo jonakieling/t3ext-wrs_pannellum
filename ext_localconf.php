@@ -22,7 +22,7 @@ call_user_func(static function () {
         'Waurisch.wrs_pannellum',
         'PanoramicView',
         array(
-            'ContentElement' => 'pannellum',
+            \Waurisch\WrsPannellum\Controller\ContentElementController::class => 'pannellum',
         ),
         array(),
         ExtUtil::PLUGIN_TYPE_CONTENT_ELEMENT
