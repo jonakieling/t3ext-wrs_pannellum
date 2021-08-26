@@ -5,6 +5,7 @@ namespace Waurisch\WrsPannellum\DataProcessor;
 use TYPO3\CMS\Core\Service\FlexFormService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class FlexFormProcessor implements DataProcessorInterface
 {
