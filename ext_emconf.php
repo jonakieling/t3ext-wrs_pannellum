@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['wrs_pannellum'] = [
     'title' => 'Panoramic Views',
     'description' => 'Pannellum integration for TYPO3, a viewer for 360 degree and panorama images.',
     'category' => 'fe',
