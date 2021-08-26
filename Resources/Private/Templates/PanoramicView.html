@@ -6,7 +6,7 @@
 <f:section name="Main">
 
 	<f:if condition="{images}">
-		<div class="panorama-container">
+		<div class="panorama-container">TEST: {settings.test}
 			<div id="panorama-{data.uid}"></div>
 		</div>
 
@@ -15,6 +15,7 @@
 				pannellum.viewer('panorama-{data.uid}', <f:format.raw value="{" />
 					"type": "equirectangular",
 					"panorama": "{f:uri.image(image:images.0,absolute:1)}",
+					"autoload":"{settings.test}"
 					{f:if(condition:images.0.title, then:'"title":"{images.0.title}",')}
 				});
 			});

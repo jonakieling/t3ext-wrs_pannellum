@@ -13,6 +13,7 @@ $GLOBALS['TCA']['tt_content']['types']['wrspannellum_view'] = [
     'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+            pi_flexform,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
             image,
@@ -52,3 +53,5 @@ $GLOBALS['TCA']['tt_content']['types']['wrspannellum_view'] = [
         ]
     ]
 ];
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('*', 'FILE:EXT:wrs_pannellum/Configuration/Flexform/flexform.xml','wrspannellum_view');

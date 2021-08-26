@@ -14,5 +14,10 @@
     "typo3/cms": {
       "extension-key": "wrs_pannellum"
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "Waurisch\\WrsPannellum\\": "Classes"
+    }
   }
 }

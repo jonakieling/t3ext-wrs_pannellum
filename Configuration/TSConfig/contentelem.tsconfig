@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+   common {
+      elements {
+         wrspannellum_view {
+            iconIdentifier = wrspannellum-view
+            title = Panorama Viewer
+            description = Zur Anzeige von 360 Grad Bildern
+            tt_content_defValues {
+               CType = wrspannellum_view
+            }
+         }
+      }
+      show := addToList(wrspannellum_view)
+   }
+}
