@@ -54,4 +54,10 @@ $GLOBALS['TCA']['tt_content']['types']['wrspannellum_view'] = [
     ]
 ];
 
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'wrs_pannellum',
+    'Pannellum',
+    'Pannellum'
+);
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('*', 'FILE:EXT:wrs_pannellum/Configuration/Flexform/flexform.xml','wrspannellum_view');

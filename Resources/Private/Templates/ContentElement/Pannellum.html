@@ -15,7 +15,7 @@
 				pannellum.viewer('panorama-{data.uid}', <f:format.raw value="{" />
 					"type": "equirectangular",
 					"panorama": "{f:uri.image(image:images.0,absolute:1)}",
-					"autoload":"{settings.test}"
+					"autoload":"{autoload}"
 					{f:if(condition:images.0.title, then:'"title":"{images.0.title}",')}
 				});
 			});

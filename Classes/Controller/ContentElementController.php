@@ -2,7 +2,6 @@
 namespace Waurisch\WrsPannellum\Controller;
 
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-    use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
 /**
  *
@@ -14,18 +13,15 @@ namespace Waurisch\WrsPannellum\Controller;
 class ContentElementController extends ActionController
 {
 
-    protected $contentObj;
-    protected $data;
-
-    public function initializeAction()
+    /**
+     * action pannellum
+     *
+     * @return void
+     */
+    public function panoramicView()
     {
-        $this->contentObj = $this->configurationManager->getContentObject();
-        $this->data = $this->contentObj->data;
-    }
-
-    protected function initializeView(ViewInterface $view)
-    {
-        $view->assign('data', $this->data);
+        $view->assign('autoload', "ControllerTest");
+        echo "PanoramicView Test";
     }
 
     /**
@@ -35,6 +31,8 @@ class ContentElementController extends ActionController
      */
     public function pannellumAction()
     {
+        $view->assign('autoload', "ControllerTest");
+        echo "Trara";
     }
 
 }

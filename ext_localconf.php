@@ -19,11 +19,9 @@ call_user_func(static function () {
     );
 
     ExtUtil::configurePlugin(
-        'Waurisch.wrs_pannellum',
-        'PanoramicView',
-        array(
-            \Waurisch\WrsPannellum\Controller\ContentElementController::class => 'pannellum',
-        ),
+        'wrs_pannellum',
+        'Pannellum',
+        [\Waurisch\WrsPannellum\Controller\ContentElementController::class => 'pannellum'],
         array(),
         ExtUtil::PLUGIN_TYPE_CONTENT_ELEMENT
     );

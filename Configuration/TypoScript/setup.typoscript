@@ -14,7 +14,7 @@ page {
 
 tt_content.wrspannellum_view =< lib.contentElement
 tt_content.wrspannellum_view {
-	templateName = PanoramicView
+	templateName = Pannellum
 	dataProcessing {
 		10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 		10 {
@@ -24,6 +24,7 @@ tt_content.wrspannellum_view {
 			}
 			as = images
 		}
+    	20 = Waurisch\WrsPannellum\DataProcessor\FlexFormProcessor
 	}
 	templateRootPaths {
 		100 = EXT:wrs_pannellum/Resources/Private/Templates/
