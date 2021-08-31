@@ -18,12 +18,8 @@ class FlexFormProcessor implements DataProcessorInterface
         $this->flexFormService = $flexFormService;
     }
 
-    public function process(
-        ContentObjectRenderer $cObj,
-        array $contentObjectConfiguration,
-        array $processorConfiguration,
-        array $processedData
-    ): array {
+    public function process(ContentObjectRenderer $cObj, array $cObjConf, array $processorConf, array $processedData): array {
+
         $originalValue = $processedData['data']['pi_flexform'];
         if (!is_string($originalValue)) {
             return $processedData;
@@ -31,7 +27,13 @@ class FlexFormProcessor implements DataProcessorInterface
 
         $flexformData = $this->flexFormService->convertFlexFormContentToArray($originalValue);
         $processedData['flexform'] = $flexformData;
+
+        $resourceFactory = \TYPO3\CMS\Core\Resource\ResourceFactory::getInstance();
+        $file = $resourceFactory->getFileObject((int)$processedData['flexform']['settings']['preview']);
+        $processedData['preview'] = $file;
+
         return $processedData;
+
     }
 }
 

@@ -4,9 +4,8 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-
 	<f:if condition="{images}">
-		<div class="panorama-container">TEST: {settings.test}
+		<div class="panorama-container">
 			<div id="panorama-{data.uid}"></div>
 		</div>
 
@@ -15,7 +14,11 @@
 				pannellum.viewer('panorama-{data.uid}', <f:format.raw value="{" />
 					"type": "equirectangular",
 					"panorama": "{f:uri.image(image:images.0,absolute:1)}",
-					"autoload":"{autoload}"
+					{f:if(condition: '{flexform.settings.autorotate} == 1', then: '"autoRotate": "6.0",')}
+					{f:if(condition: '{flexform.settings.friction} != 1', then: '"friction": "0.0",')}
+					{f:if(condition: '{flexform.settings.draggable} != 1', then: '"draggable": false,"disableKeyboardCtrl": true,')}
+					{f:if(condition: '{flexform.settings.ui} != 1', then: '"showControls": false,')}
+					"autoLoad":{f:if(condition: '{flexform.settings.autoload} == 1', then: 'true', else: 'false')}
 					{f:if(condition:images.0.title, then:'"title":"{images.0.title}",')}
 				});
 			});
