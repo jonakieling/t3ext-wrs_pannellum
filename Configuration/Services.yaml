@@ -7,11 +7,3 @@ services:
 
   Waurisch\WrsPannellum\:
     resource: '../Classes/*'
-
-  flexformservice:
-    class: 'TYPO3\CMS\Core\Service\FlexFormService'
-
-  Waurisch\WrsPannellum\DataProcessor\FlexFormProcessor:
-    public: true
-    arguments:
-      $flexFormService: '@flexformservice'

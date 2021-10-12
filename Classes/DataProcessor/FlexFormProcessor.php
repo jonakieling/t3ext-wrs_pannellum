@@ -14,8 +14,8 @@ class FlexFormProcessor implements DataProcessorInterface
      */
     protected $flexFormService;
 
-    public function __construct(FlexFormService $flexFormService) {
-        $this->flexFormService = $flexFormService;
+    public function __construct() {
+        $this->flexFormService = GeneralUtility::makeInstance(FlexFormService::class);
     }
 
     public function process(ContentObjectRenderer $cObj, array $cObjConf, array $processorConf, array $processedData): array {
@@ -27,10 +27,6 @@ class FlexFormProcessor implements DataProcessorInterface
 
         $flexformData = $this->flexFormService->convertFlexFormContentToArray($originalValue);
         $processedData['flexform'] = $flexformData;
-
-        $resourceFactory = \TYPO3\CMS\Core\Resource\ResourceFactory::getInstance();
-        //$file = $resourceFactory->getFileObject((int)$processedData['flexform']['settings']['preview']);
-        //$processedData['preview'] = $file;
 
         return $processedData;
 
