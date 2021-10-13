@@ -4,6 +4,7 @@
     margin-bottom: 0;
     padding-bottom: 75%;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 .panorama-container .pnlm-container {
     position: absolute;
