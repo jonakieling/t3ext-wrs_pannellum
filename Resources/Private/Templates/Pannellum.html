@@ -14,6 +14,9 @@
 				pannellum.viewer('panorama-{data.uid}', <f:format.raw value="{" />
 					"type": "equirectangular",
 					"panorama": "{f:uri.image(image:images.0,absolute:1)}",
+					<f:if condition="{preview}">     
+						"preview": "{f:uri.image(image:preview.0,absolute:1)}",
+					</f:if>
 					{f:if(condition: '{flexform.settings.autorotate} == 1', then: '"autoRotate": "6.0",')}
 					{f:if(condition: '{flexform.settings.friction} != 1', then: '"friction": "0.0",')}
 					{f:if(condition: '{flexform.settings.draggable} != 1', then: '"draggable": false,"disableKeyboardCtrl": true,')}
