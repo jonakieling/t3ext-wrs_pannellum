@@ -24,6 +24,13 @@ tt_content.wrspannellum_view {
 			}
 			as = images
 		}
+		15 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor 
+		15 { 
+			references {
+				fieldName = preview
+			} 
+			as = preview 
+		}
     	20 = Waurisch\WrsPannellum\DataProcessor\FlexFormProcessor
 	}
 	templateRootPaths {

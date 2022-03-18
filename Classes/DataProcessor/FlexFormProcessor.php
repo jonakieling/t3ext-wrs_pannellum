@@ -29,8 +29,8 @@ class FlexFormProcessor implements DataProcessorInterface
         $processedData['flexform'] = $flexformData;
 
         $resourceFactory = \TYPO3\CMS\Core\Resource\ResourceFactory::getInstance();
-        $file = $resourceFactory->getFileObject((int)$processedData['flexform']['settings']['preview']);
-        $processedData['preview'] = $file;
+        //$file = $resourceFactory->getFileObject((int)$processedData['flexform']['settings']['preview']);
+        //$processedData['preview'] = $file;
 
         return $processedData;
 
