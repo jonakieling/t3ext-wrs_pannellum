@@ -4,7 +4,7 @@
   "description": "",
   "license": "GPL-2.0-or-later",
   "require": {
-    "typo3/cms-core": "^8.7 || ^9.5 || ^10.4"
+    "typo3/cms-core": "^10.4 || ^11.5"
   },
   "replace": {
     "waurisch/wrs-pannellum": "self.version",
