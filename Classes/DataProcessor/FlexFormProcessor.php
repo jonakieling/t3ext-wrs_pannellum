@@ -2,10 +2,11 @@
 
 namespace Waurisch\WrsPannellum\DataProcessor;
 
-use TYPO3\CMS\Core\Service\FlexFormService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
+use TYPO3\CMS\Core\Service\FlexFormService;
+use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
 class FlexFormProcessor implements DataProcessorInterface
 {
@@ -28,7 +29,7 @@ class FlexFormProcessor implements DataProcessorInterface
         $flexformData = $this->flexFormService->convertFlexFormContentToArray($originalValue);
         $processedData['flexform'] = $flexformData;
 
-        $resourceFactory = \TYPO3\CMS\Core\Resource\ResourceFactory::getInstance();
+        $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
         //$file = $resourceFactory->getFileObject((int)$processedData['flexform']['settings']['preview']);
         //$processedData['preview'] = $file;
 
