@@ -21,7 +21,7 @@ tt_content.wrspannellum_view {
 			as = preview 
 		}
     	20 = Waurisch\WrsPannellum\DataProcessor\FlexFormProcessor
-		20 = Waurisch\WrsPannellum\DataProcessor\AssetProcessor
+		30 = Waurisch\WrsPannellum\DataProcessor\AssetProcessor
 	}
 	templateRootPaths {
 		100 = EXT:wrs_pannellum/Resources/Private/Templates/
