@@ -3,8 +3,6 @@
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility as ExtManUtil;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility as ExtUtil;
 
-defined('TYPO3_MODE') or die();
-
 call_user_func(static function () {
 
     ExtManUtil::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:wrs_pannellum/Configuration/TSConfig/contentelem.tsconfig">');
